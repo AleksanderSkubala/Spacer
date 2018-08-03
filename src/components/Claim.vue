@@ -2,9 +2,10 @@
     <div id="wrapperClaim">
         <h1 id="claim">SPACER</h1> <br/>
         <p class="pClaim">~by Aleksander Skubała</p>
-        <p class="pClaim">Begin your journey through our beautiful and mystery Space.</p>
-        <p class="pClaim">1. Type the Space-related word.</p>
-        <p class="pClaim">2. Be amazed.</p>
+        <p class="pClaim space">(Based on Hello Roman app.)</p>
+        <p class="pClaim space">Begin your journey through our beautiful and mystery Space.</p>
+        <p class="pClaim"><strong>1.</strong> Type the Space-related word.</p>
+        <p class="pClaim">(You don't have to press Enter or any other buttons, </br> but whait o moment to load images.)</p>
     </div>
 </template>
 
@@ -26,15 +27,23 @@
 }
 
 #claim{
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 50px;
+    font-weight: bolder;
     color: white;
 }
 
 .pClaim{
     font-size: 15p;
-    font-weight: semi-bold;
+    font-weight: normal;
     color: white;
+}
+
+strong{
+    font-weight: 900;
+}
+
+.space{
+    padding-bottom: 20px;
 }
 
 </style>
