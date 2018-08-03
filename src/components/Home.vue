@@ -2,7 +2,7 @@
   <div :class="[{marginS: step === 1}, 'wrapper']">
     <div id="content">
         <transition name="slider">
-            <img src="./assets/indeks.svg" v-if="step === 1" />
+            <img src="../assets/indeks.svg" v-if="step === 1" />
         </transition>
         <transition name="fade" >
             <Hero v-if="step === 0"/>
@@ -21,34 +21,28 @@
 </template>
 
 <script>
-import axios from 'axios';
+// import axios from 'axios';
+var axios = require('axios');
 import debounce from 'lodash.debounce';
-import Claim from '@/components/Claim.vue';
-import Search from '@/components/Search.vue';
-import Hero from '@/components/Hero.vue';
-import Results from '@/components/Results.vue';
-import Modal from '@/components/Modal.vue';
+import Claim from './Claim.vue';
+import Search from './Search.vue';
+import Hero from './Hero.vue';
+import Results from "./Results.vue";
+import Modal from "./Modal.vue";
 
-const API = 'https://images-api.nasa.gov/search?q=';
+const API = "https:\\images-api.nasa.gov/search?q=";
 
 export default {
-  name: 'App',
-  components: {
-    Claim,
-    Search,
-    Hero,
-    Results,
-    Modal,
-  },
+  name: 'home',
   data() {
-    return{
-          loading: false,
-          step: 0,
-          searchQuery: "",
-          wyniki: [],
-          modalOpen: false,
-          photoItem: null,
-      };
+	return{
+        loading: false,
+        step: 0,
+        searchQuery: "",
+		    wyniki: [],
+        modalOpen: false,
+        photoItem: null,
+    };
   },
   methods:{
    handler: debounce(function() {
@@ -65,6 +59,22 @@ export default {
         .catch((error) => {
           console.log(error);
         });
+      // $.ajax({
+      //   url         : `${API}${this.searchQuery}&media_type=image`,
+      //   type        : "get", //typ połączenia
+      //   contentType : 'application/json', //gdy wysyłamy dane czasami chcemy ustawić ich typ
+      //   dataType    : 'json', //typ danych jakich oczekujemy w odpowiedzi
+      // })
+      // .done((res) =>{
+      //   this.wyniki = res.collection.items;
+      //   this.loading = false;
+      //   this.step = 1;
+      //   console.log(res);
+      // })
+      // .fail(function (err){
+      //   console.warn( "Wystąpił błąd w połączniu");
+      //   console.warn( err);
+      // });
     }, 500),
     handlerModal(i) {
         this.modalOpen = true;
@@ -74,25 +84,15 @@ export default {
         this.modalOpen = false;
     },
   },
-};
+  components: {
+    Claim,
+    Search,
+    Hero,
+    Results,
+    Modal,
+  }
+}
 </script>
-
-<style>
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-
-#view{
-	text-align: center;
-}
-
-*{
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-sefir;
-}
-
-body{
-    margin: 0;
-}
-</style>
 
 <style scoped>
 
@@ -188,5 +188,7 @@ body{
     transform: rotate(360deg);
   }
 }
+
+
 
 </style>
