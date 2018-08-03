@@ -102,9 +102,8 @@ export default{
   height: auto;
 }
 .iWrapper .desriptionD {
-  max-width: 50%;
+  max-width:100%;
   height: auto;
-  max-height: 50vh;
 }
 
 .iWrapper .allD{
@@ -114,9 +113,7 @@ export default{
 }
 
 .all{
-  width: 100% !important;
-  max-height: 80vh !important;
-  height: 60vh !important;
+  height: auto;
   background-color: #f6f6f6;
   border: none;
   border-radius: none;
@@ -126,7 +123,7 @@ export default{
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow-y: visible;
+  overflow: auto;
 }
 
 @media (min-width: 1024px) {
@@ -139,7 +136,6 @@ export default{
     z-index: 101;
     margin: auto;
     display: flex;
-    flex-direction: column;
     position: relative;
     flex-direction: row;
   }
@@ -154,7 +150,7 @@ export default{
     width: auto;
   }
   .iWrapper .descriptionD {
-    max-width: 50%;
+    max-width: 50% !important;
     width: 50%;
     height: auto;
   }

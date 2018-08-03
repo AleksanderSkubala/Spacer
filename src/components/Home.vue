@@ -59,23 +59,7 @@ export default {
         .catch((error) => {
           console.log(error);
         });
-      // $.ajax({
-      //   url         : `${API}${this.searchQuery}&media_type=image`,
-      //   type        : "get", //typ połączenia
-      //   contentType : 'application/json', //gdy wysyłamy dane czasami chcemy ustawić ich typ
-      //   dataType    : 'json', //typ danych jakich oczekujemy w odpowiedzi
-      // })
-      // .done((res) =>{
-      //   this.wyniki = res.collection.items;
-      //   this.loading = false;
-      //   this.step = 1;
-      //   console.log(res);
-      // })
-      // .fail(function (err){
-      //   console.warn( "Wystąpił błąd w połączniu");
-      //   console.warn( err);
-      // });
-    }, 500),
+    }, 900),
     handlerModal(i) {
         this.modalOpen = true;
         this.photoItem = i;

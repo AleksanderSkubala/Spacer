@@ -65,7 +65,7 @@ export default {
         .catch((error) => {
           console.log(error);
         });
-    }, 500),
+    }, 800),
     handlerModal(i) {
         this.modalOpen = true;
         this.photoItem = i;
