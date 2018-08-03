@@ -1,7 +1,7 @@
 <template>
 <div id="wrapperSearch">
     <div class="search">
-        <input name="search" placeholder="e.g. Tytan" :value="value" @input="handlerC" :class="{dark}"/>
+        <input name="search" placeholder="e.g. Moon" :value="value" @input="handlerC" :class="{dark}"/>
     </div>
 </div>
 </template>

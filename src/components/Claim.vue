@@ -2,8 +2,9 @@
     <div id="wrapperClaim">
         <h1 id="claim">SPACER</h1> <br/>
         <p class="pClaim">~by Aleksander Skubała</p>
-        <p class="pClaim">Begin yoyr journey throught our beautiful and mystery Space.</p>
-        <p class="pClaim">Type space-related theme and start your search. </p>
+        <p class="pClaim">Begin your journey through our beautiful and mystery Space.</p>
+        <p class="pClaim">1. Type the space-related word.</p>
+        <p class="pClaim">1. Be amazed.</p>
     </div>
 </template>
 
